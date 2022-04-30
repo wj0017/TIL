@@ -1,4 +1,4 @@
-// È¸¹® °Ë»ç ÇÁ·Î±×·¥ (Stack È°¿ë)
+// íšŒë¬¸ ê²€ì‚¬ í”„ë¡œê·¸ëž¨ (Stack í™œìš©).
 
 #include<stdio.h>
 #include<stdlib.h>
