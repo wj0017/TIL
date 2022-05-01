@@ -1,4 +1,4 @@
-
+/*
 #include <iostream>
 
 using namespace std;
@@ -47,9 +47,8 @@ int main()
 
    printArray(arr3, 2, 5);
 }
+*/
 
-
-/*
 #include<iostream>
 
 using namespace std;
@@ -143,4 +142,3 @@ void maxmin(int data[][4], int* max, int* min) {
       }
    }
 }
-*/
