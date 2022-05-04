@@ -9,7 +9,7 @@ class Bizcard{
 public:
 
     Bizcard() {}
-    Bizcard(const char * myname, const char * myaddress, long long office, long long mobile)
+    Bizcard(const char * myname, const char * myaddress, long long mobile, long long office)
     {
         int Name_len = strlen(myname)+1;
         int Address_len = strlen(myaddress)+1;
@@ -76,7 +76,7 @@ template<class T>
 class Bag{
 public:
     Bag(int bagCapacity = 3);
-    ~Bag(); //º“∏Í¿⁄
+    ~Bag(); //ÏÜåÎ©∏Ïûê
 
     int Size() const;
     bool IsEmpty() const; 
@@ -163,7 +163,7 @@ int main(){
     Bizcard Ljj("Lee Jin Ju", " Seoul " , 11038104719 ,11018391648);
     
 
-    cout << endl << "------- 3∞≥ ª˝º∫ -------" << "\n\n";
+    cout << endl << "------- 3Í∞ú ÏÉùÏÑ± -------" << "\n\n";
 
     a.Push(Lys);
     a.Push(Lwj);
@@ -182,7 +182,7 @@ int main(){
     Bizcard Lms("Kim Min Su", " Seoul " , 11018391649 ,11039176491);
     Bizcard Cun("Cha U Na", " Seoul " , 11019261972 ,11017401647);
 
-    cout << endl << "------- 4∞≥ ª˝º∫ -------" << "\n\n";
+    cout << endl << "------- 4Í∞ú ÏÉùÏÑ± -------" << "\n\n";
 
     a.Push(Lth);
     a.Push(Yjh);
@@ -197,7 +197,7 @@ int main(){
         cout<< b <<endl;
     }
 
-    cout << endl << "-------2∞≥ ªË¡¶ -------" << "\n\n";
+    cout << endl << "-------2Í∞ú ÏÇ≠Ï†ú -------" << "\n\n";
 
     a.Pop();
     a.Pop();
