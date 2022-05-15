@@ -19,7 +19,7 @@ int main() {
 }
 
 /*
-//BOJ 2941 크로아티아 알파벳
+//BOJ 2941 크로아티아 알파벳 d
 //c=, c-, dz=, d-, lj, nj, s=, z=
  
 #include<iostream>
