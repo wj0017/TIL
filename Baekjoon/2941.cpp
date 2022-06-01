@@ -6,7 +6,7 @@ string s;
 
 int main() { 
 
-    cin >> s; 
+    cin >> s;   
     
     for(int i = 0; i < s.size(); i++) { 
 
