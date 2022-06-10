@@ -31,7 +31,7 @@ int main(){
 
             for(int k = j; k < word.length(); k++){
                 if(word[j] == word[k]){
-                    if(k - check != 1){
+                    if(k - check != 1 && k - check != 0){
                         cnt2++;
                     }
                     else{
