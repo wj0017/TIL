@@ -4,7 +4,7 @@ using namespace std;
 int alpha[26], 
 cnt = 0; 
 string input; 
-//아스키코드 : 대문자 65~90, 소문자 97~122 
+//아스키코드 : 대문자 65~90, 소문자 97~122 d
 
 int main() { 
     cin >> input; 
