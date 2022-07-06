@@ -1,9 +1,3 @@
-#include<iostream>
-#include<algorithm>
-#include<vector>
-#include<string>
-#include<numeric>
-using namespace std;
 
 /*
 ** 에라토스테네스의 체 **
@@ -20,31 +14,27 @@ using namespace std;
 위의 과정을 반복하면 구하는 구간의 모든 소수가 남는다.
 */
 
-int M, N;
-int sum = 0;
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-int main()
-{
-    cin >> M >> N;
+int main() {
+    int min,max;
+    bool *prime;
+    cin >> min;
+    cin >> max;
+    prime = new bool[max+1];
+    fill_n(prime, max+1, 1);
+    prime[0] = false;
+    prime[1] = false;
 
-    bool *check;
-    check = new bool[N + 1];
-    fill_n(check, N+1, 1);
-    check[0] = false;
-    check[1] = false;
+    for (int i = 2; i <= sqrt(max); i++)
+        if(prime[i] == true)
+            for(int j = i*2; j <= max; j += i)
+                prime[j] = false;
 
-    for(int i = 2; i < N; i++){
-        if(check[i] == true){
-            for(int j = i*2; j < N; j += i){
-                check[j] = false;
-            }
-        }
-    }
-
-    for(int i = M; i < N; i++){
-        if(check[i] == true){
-            cout << i << endl;
-        }
-    }
+    for (int i = min; i <= max; i++)
+        if(prime[i] == true)
+            cout << i << "\n";
+   return 0;
 }
-
