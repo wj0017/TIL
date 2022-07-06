@@ -1,11 +1,11 @@
 #include<iostream>
 
 using namespace std;
-
+//a
 
 bool hansoo(int num){
 
-    if(num < 100)
+    if(num < 100) 
         return true;
 
     else if(num == 1000)
