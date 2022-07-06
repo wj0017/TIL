@@ -7,30 +7,28 @@ using namespace std;
 
 int M, N;
 int sum = 0;
-int cnt = 0;
-vector<int> ans;
-
 
 int main()
 {
     cin >> M >> N;
+    int min = -1;
 
-    for(int i = 0; i < M - N; i++){
+    for(int i = M; i <= N; i++){
 
-        int getNum = M + i;
+        int getNum = i;
         int cn = 0;
 
         for(int j = 2; j < getNum; j++){
             if(getNum % j == 0) cn++;
         }
         if(cn == 0 && getNum != 1) {
-            cnt++;
-            ans.push_back(getNum);
+            if(min == -1){
+                min = i;
+            }
+            sum += i;
         }
     }
 
-    sum = accumulate(ans.begin(), ans.end(), 0);
-
-    if(cnt > 0) cout << sum << "\n" << ans[0];
+    if(min != -1) cout << sum << "\n" << min;
     else        cout << "-1";
 }
