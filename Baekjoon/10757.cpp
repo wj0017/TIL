@@ -1,4 +1,4 @@
-#include<iostream>
+#include<iostream> // 배열과 벡터의 유동적 사용;;
 #include<algorithm>
 #include<vector>
 #include<string>
