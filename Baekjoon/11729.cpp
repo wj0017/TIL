@@ -1,29 +1,24 @@
 #include<iostream>
-#include<cmath>
 
 using namespace std;
 
-int hanoi(int num){
+void hanoi(int num, int from, int to, int bypass){
 
     if(num == 1){
-        cout << "1 3";
+        cout << from << to << endl;
     }
     else{
-        hanoi(num - 1);
+        hanoi(num - 1, from, bypass, to);
+        cout << from << to << endl;
+        hanoi(num - 1, bypass, to, from);
     }
 }
 
 int main(){
 
-    // 하노이탑
-    // 1 = 1
-    // 2 = 3
-    // 3 = 7
-    // 4 = 15
-
     int block;
     cin >> block;
+    cout << (1<<block) -1 << endl;
 
-    int result = hanoi(block);
-    cout << result;    
+    hanoi(block, 1, 3, 2);
 }
