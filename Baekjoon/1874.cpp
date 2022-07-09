@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 
-    stack<int> a;
+    stack<int> a; 
     vector<char> b;
 
     int num, num_ = 1;
@@ -23,7 +23,7 @@ int main(){
             num_++;
 		}
 
-        if (a.top() == c)
+        if (a.top() == c)//
 		{
 			a.pop();
 			b.push_back('-');
