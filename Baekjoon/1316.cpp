@@ -7,7 +7,7 @@ int main(){
 
     string word;
 
-    int num;
+    int num;//
     cin >> num;
     int cnt = num;
     
