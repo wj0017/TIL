@@ -24,7 +24,7 @@ A, B, C가 주어졌을 때, 손익분기점을 구하는 프로그램을 작성
 
 int main(void){
 
-    int A, B, C;
+    int A, B, C;//
     int n = 1;
     cin>>A>>B>>C;
 
