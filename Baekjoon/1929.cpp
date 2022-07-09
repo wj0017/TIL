@@ -37,4 +37,4 @@ int main() {
         if(prime[i] == true)
             cout << i << "\n";
    return 0;
-}
+}//
