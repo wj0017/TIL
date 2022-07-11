@@ -16,7 +16,7 @@ int Findseries(int N)
                 series++;
                 if(series == N)
                     return i;
-                break;
+                break;//
             }
         i++;
     }
