@@ -3,6 +3,7 @@
 #include<stack>
 #define MAX 1000001
 
+// counting number
 using namespace std;
 
 int main(void)
@@ -20,7 +21,7 @@ int main(void)
         for(int j = 0; j < st.size(); j++){
             
         }
-        while (!st.empty() && ){st.pop();}
+        while (!st.empty() && st.empty()){st.pop();}
 
         if(st.empty()) result[i] = -1;
         else result[i] = st.top();
