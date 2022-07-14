@@ -1,34 +1,42 @@
-#include<iostream>
-#include<algorithm>
-#include<stack>
+#include <iostream>
+#include <vector>
+#include <stack>
 #define MAX 1000001
 
-// counting number
 using namespace std;
 
-int main(void)
+int main()
 {
+	int n;
+	cin >> n;
+
+	vector<int> arr(n + 1);
+	vector<int> result(n + 1, - 1);
+	vector<int> cnt(MAX + 1, 0);
 	stack<int> st;
-    int arr[MAX];
-    int result[MAX];
-    int num, cnt;
-    
-    cin >> num;
 
-    for(int i = 0; i < num; i++){cin >> arr[i];}
+	for (int i = 1; i <= n; i++)
+	{
+		cin >> arr[i];
+		cnt[arr[i]]++;
+	}
 
-    for(int i = num - 1; i >= 0; i--){
-        for(int j = 0; j < st.size(); j++){
-            
-        }
-        while (!st.empty() && st.empty()){st.pop();}
+	for (int i = 1; i <= n; i++)
+	{
+		while (!st.empty() && cnt[arr[st.top()]]< cnt[arr[i]])
+		{
+			result[st.top()] = arr[i];
+			st.pop();
+		}
+		st.push(i);
+	}
 
-        if(st.empty()) result[i] = -1;
-        else result[i] = st.top();
+	for (int i = 1; i <= n; i++)
+	{
+		cout << result[i] << ' ';
+	}
+	cout << '\n';
 
-        st.push(arr[i]);
-    }
-
-    for(int i = 0; i < num; i++)
-        cout << result[i] << " ";
+	return 0;
 }
+//48~~
