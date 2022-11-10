@@ -53,8 +53,7 @@ void floyd2() {
 		cout << endl;
 	}
     cout << endl;
-    
-    path(p,1,4);
+
 }
 
 void path(int *p[5], int q, int r){
