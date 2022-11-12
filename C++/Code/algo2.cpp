@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include<iostream>
 #include <climits>
 
@@ -74,7 +73,8 @@ int order(int i, int j, int P[N+1][N+1]){
         order(k+1, j, P);
         cout << ")";
     }
-=======
+}
+/*
 #include<iostream>
 #include <climits>
 
@@ -152,3 +152,4 @@ int order(int i, int j, int P[N+1][N+1]){
     }
 >>>>>>> 096d49bc5924c65723e19fe9c7fe8557fb65a3d9
 }
+*/
