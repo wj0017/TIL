@@ -9,10 +9,9 @@ void optimalSearchTree(int n, const float p[], float& minAvg, int** R);
 int main(void){
     int n = 4;
     
-    //교재의 입력 데이터]
+    //Example 3.9
     float book_p[5] = {0, 0.375, 0.375, 0.125, 0.125};
-
-    //임의의 자작 데이터
+    // 자작 데이터
     float my_p[5] = {0, 0.1, 0.2, 0.2, 0.3};
 
     float minAvg;
