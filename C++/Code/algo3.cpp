@@ -12,7 +12,7 @@ int main(void){
     //Example 3.9
     float book_p[5] = {0, 0.375, 0.375, 0.125, 0.125};
     // 자작 데이터
-    float my_p[5] = {0, 0.1, 0.2, 0.2, 0.3};
+    float my_p[5] = {0, 0.5, 0.25, 0.25, 0.125};
 
     float minAvg;
 
@@ -28,19 +28,19 @@ int main(void){
         }
     }
 
-    optimalSearchTree(n, book_p, minAvg, R);
+    optimalSearchTree(n, my_p, minAvg, R);
 
     cout << "\n minAug : " << minAvg;
 
     cout << "\n\n R : ";
-    for (int i = 1; i <= n; ++i){
+    for (int i = 0; i <= n; ++i){
         cout << "\t" << i;
     }
-    cout << endl << "     _________________________________" << endl;
+    cout << endl << "     ______________________________________" << endl;
     for (int i = 1; i <= n+1; ++i)
     {
         cout << "  " << i << " |";
-        for (int j = 1; j <= n; ++j)
+        for (int j = 0; j <= n; ++j)
             cout << "\t" << R[i][j];
         cout << endl;
     }
@@ -91,14 +91,14 @@ void optimalSearchTree(int n, const float p[], float& minAvg, int** R){
     }
 
     cout << "\n A : ";
-    for (int i = 1; i <= n; ++i){
+    for (int i = 0; i <= n; ++i){
         cout << "\t" << i;
     }
-    cout << endl << "     _________________________________" << endl;
+    cout << endl << "     ______________________________________" << endl;
     for (int i = 1; i <= n+1; ++i)
     {
         cout << "  " << i << " |";
-        for (int j = 1; j <= n; ++j)
+        for (int j = 0; j <= n; ++j)
             cout << "\t" << A[i][j];
         cout << endl;
     }
