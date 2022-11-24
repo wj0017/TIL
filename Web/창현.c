@@ -11,7 +11,7 @@ int main(void) {
         printf("문자열을 입력하세요(종료 : 0)=>");
         scanf("%s", s);
 
-        if(s[0]== '0'){
+        if(s[0] == '0'){
             break;
         }
         Palindrome(s);
