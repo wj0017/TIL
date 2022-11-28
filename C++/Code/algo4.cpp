@@ -3,7 +3,7 @@
 #include <climits>
 
 #define N 5
-#define INF 999
+#define INF 999 
 
 using namespace std;
 
