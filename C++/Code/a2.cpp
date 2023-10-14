@@ -58,6 +58,7 @@ public:
         } 
         delete first; // null 포인터 삭제
         last = 0;
+        ++++
         
     }
 
