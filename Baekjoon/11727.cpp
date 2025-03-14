@@ -13,25 +13,32 @@
 첫째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.
 
 
-*/
+HOW CAN I SOLVE THIS QUESTION? 
 
+N
+1 ::= 1
+2 ::= 1+1 +1 = 3
+3 ::= 1+2 +2 = 5
+4 ::= 1+3+1 +4+2 = 11
+
+*/
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    int fibo[1001];
+    int dp[1001];
     int n;
     cin >> n;
     
-    fibo[1] = 1;
-    fibo[2] = 2;
+    dp[1] = 1;
+    dp[2] = 3;
     
     for(int i=3; i<=n; i++){
-        fibo[i] = (fibo[i-2] + fibo[i-1]) % 10007;
+        dp[i] = (dp[i-1] + 2*dp[i-2]) % 10007;
     }
     
-    cout << fibo[n] % 10007;
+    cout << dp[n];
     
     return 0;
 }
