@@ -35,25 +35,54 @@ P1 = 5, P2 = 2, P3 = 8, P4 = 10인 경우에는 카드가 1개 들어있는 카�
 
 
 HOW CAN I SOLVE THIS QUESTION? 
-
-
-
-
 */ 
+
+
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-int main() {
-    int n, pi;
-    int p[n+1];
-    cin >> n;
+int maxPayment(int N, const vector<int>& prices) {
+    /*
+     * N개의 카드를 구매하기 위해 지불해야 하는 금액의 최댓값을 계산
+     * 
+     * Args:
+     *     N: 구매하려는 카드의 개수
+     *     prices: 카드팩 가격 벡터 (인덱스 0부터 시작)
+     * 
+     * Returns:
+     *     최대 지불 금액
+     */
     
-    for(int i=0; i<n; i++){
-      cin >> pi;
-      p[i] = pi;
+    // DP 테이블 초기화 (dp[i]는 i개의 카드를 살 때 최대 금액)
+    vector<int> dp(N + 1, 0);
+    
+    // 각 카드 개수에 대해 최대 금액 계산
+    for (int i = 1; i <= N; i++) {
+        // i개의 카드를 살 때의 최대 금액 찾기
+        for (int j = 1; j <= i; j++) {
+            // 카드팩 j의 가격과 이전에 계산한 최대 금액을 이용
+            if (j <= prices.size()) {
+                dp[i] = max(dp[i], dp[i - j] + prices[j - 1]);
+            }
+        }
     }
     
+    return dp[N];
+}
+
+int main() {
+    int N;
+    cin >> N;
+    
+    vector<int> prices(N);
+    for (int i = 0; i < N; i++) {
+        cin >> prices[i];
+    }
+    
+    cout << maxPayment(N, prices) << endl;
     
     return 0;
 }
