@@ -37,7 +37,7 @@ int min_price_cal(int N; const vector<int>& price;{
         dp[i] = min(dp[i], dp[i-j] + price[j-1])
       }
     }
-    
+     
     return dp[N]
 }
 
