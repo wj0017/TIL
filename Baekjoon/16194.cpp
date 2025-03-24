@@ -25,20 +25,23 @@ HOW CAN I SOLVE THIS QUESTION?
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <climits>
 
 using namespace std;
 
-int min_price_cal(int N; const vector<int>& price;{
-    vector<int> dp(N+1, 0);
+int min_price_cal(int N, const vector<int>& price){
+    vector<int> dp(N+1, INT_MAX);
+    dp[0]=0;
     
     for(int i=1; i<=N; i++){
       for(int j=1; j<=i; j++){
-        if(j <= price.size())
-        dp[i] = min(dp[i], dp[i-j] + price[j-1])
+        if(j <= price.size()){
+          dp[i] = min(dp[i], dp[i-j] + price[j-1]);
+        }
       }
     }
      
-    return dp[N]
+    return dp[N];
 }
 
 int main() {
@@ -48,9 +51,10 @@ int main() {
     vector<int> price(N);
     
     for(int i=0; i<N; i++){
-      cin >> price[i]
+      cin >> price[i];
     }
     
+    cout << min_price_cal(N, price) << endl;
     
     return 0;
 }
