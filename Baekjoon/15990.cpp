@@ -73,7 +73,7 @@ int main() {
         int n;
         cin >> n;
         cout << result[n] << '\n';
-    }
+    } 
     
     return 0;
 }
