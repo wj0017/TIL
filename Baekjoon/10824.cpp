@@ -18,7 +18,7 @@ int main()
 	num1 = stoll(a);
 	num2 = stoll(c);
 
-	cout << num1 + num2;	
+	cout << num1 + num2;  
 
 	return 0;
 }
